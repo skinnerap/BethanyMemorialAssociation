@@ -1,0 +1,85 @@
+.Toolbar {
+    width: 100%;
+    height: 85px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-around;
+    color: #fff;
+    padding: 0 20px;
+    box-sizing: border-box;
+    z-index: 90;
+}
+
+.ToolbarOverlay {
+    background-color: #00000080;
+}
+
+.donateBtn {
+    margin-top: 12px;
+    background-color: #1c92e0;
+    border: 5px solid #fff;
+    color: #fff;
+    font-size: 125%;
+    letter-spacing: .2rem;
+    padding: 8px 15px;
+    transition: .7s;
+    cursor: pointer;
+}
+
+.donateBtn:hover {
+    background-color: #fff;
+    border: 5px solid #1c92e0;
+    color: #1c92e0;
+ }
+
+.nav {
+    height: 100%;
+    margin-top: 30px;
+}
+
+.nav a {
+    vertical-align: center;
+    text-decoration: none;
+    padding: 10px;
+    color: #fff;
+    text-transform: uppercase;
+    margin-right: 5px;
+    transition: .5s;
+}
+
+.nav a:hover {
+    color: #e45e20;
+}
+
+.title {
+    align-self: center;
+    text-transform: capitalize;
+    font-weight: 300;
+    letter-spacing: .2rem;
+    font-size: 130%;
+}
+
+@media (max-width: 499px) {
+    .desktopOnly {
+        display: none;
+    }
+
+    .title {
+        font-size: 120%;
+    }
+}
+
+@media (min-width: 500px) {
+    .mobileOnly {
+        display: none;
+    }
+}
+
+.menuBtn {
+    font-size: 300%;
+    cursor: pointer;
+    margin: 10px;
+    padding-left: 20px;
+}

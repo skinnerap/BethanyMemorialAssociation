@@ -1,0 +1,43 @@
+.Photos {
+    color: #fff;
+    margin-top: 15vh;
+    background-color: #061c2b;
+    padding-top: 2vh;
+}
+
+.Photos p {
+    margin: 5vh 20vh;
+    margin-bottom: 8vh;
+    text-indent: 3%;
+    font-size: 110%;
+    line-height: 1.8rem;
+}
+
+.Photos h3 {
+    text-align: center;
+    margin-top: 15vh;
+    margin-bottom: 5vh;
+    font-size: 200%;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+}
+
+.Photos a {
+    text-decoration: none;
+    color:#e45e20;
+   
+    transition: .3s;
+}
+
+.Photos a:hover {
+    color: #2075e4;
+}
+
+.GridLayout {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: auto;
+    padding: 10vh;
+    padding-top: 3vh;
+}

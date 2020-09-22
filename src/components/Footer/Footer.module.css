@@ -1,0 +1,45 @@
+.Footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-top: 8vh;
+    margin-bottom: 8vh;
+}
+
+.Footer a {
+    text-decoration: none;
+    font-size: 120%;
+    font-weight: 300;
+    letter-spacing: .2rem;
+    line-height: 2rem;
+    color: #0d0749;
+    transition: 06.s;
+}
+
+.Footer a:hover {
+    color: #852407;
+}
+
+.ULcontainer {
+    width: fit-content;
+    vertical-align: middle;
+    margin: 0 auto;
+}
+
+.UL {
+    list-style: none;
+}
+
+.RightSide {
+    display: flex;
+    flex-flow: column;
+    justify-content: space-evenly;
+}
+
+.RightProp img {
+    width: 30px;
+    padding-right: 10px;
+}
+
+.RightProp span {
+    vertical-align: top;
+}

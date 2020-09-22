@@ -1,0 +1,31 @@
+.Mission {
+    display: block;
+    margin: 5vh 20vh;
+}
+
+.Mission p {
+    margin-bottom: 2vh;
+    text-indent: 3%;
+    font-size: 110%;
+    line-height: 1.8rem;
+}
+
+.Mission h2 {
+    text-align: center;
+    margin-bottom: 5vh;
+    font-size: 200%;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+}
+
+.Mission a {
+    text-decoration: none;
+    color:#e45e20;
+   
+    transition: .3s;
+}
+
+.Mission a:hover {
+    color: #2075e4;
+}

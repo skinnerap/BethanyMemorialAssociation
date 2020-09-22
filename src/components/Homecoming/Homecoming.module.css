@@ -1,0 +1,59 @@
+.Homecoming {
+    padding-top: 10vh;
+}
+
+.Card {
+    width: 1000px;
+    height: 400px;
+    margin: 0 auto;
+    margin-bottom: 20vh;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 3px #eee;
+    display: flex;
+    border-radius: 20px;
+}
+
+.Card img {
+    height: 400px;
+    display: inline-block;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+.Card h4 {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.Card p {
+    display: inline-block;
+}
+
+.Header {
+    font-size: 200%;
+    text-transform: uppercase;
+    font-weight: 300;
+    text-align: center;
+    margin-bottom: 8vh;
+    margin-top: 5vh;
+    letter-spacing: .2rem;
+}
+
+.Title {
+    display: block;
+    margin-bottom: 1vh;
+    line-height: 2rem;
+}
+
+.TextContainer {
+    padding: 8%;
+    word-spacing: .2rem;
+}
+
+.TitleProp {
+    font-weight: 800;
+}
+
+.ImageContainer {
+    width: fit-content;
+}

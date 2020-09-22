@@ -1,0 +1,9 @@
+.Selected {
+    display: block;
+    padding: 10px;
+    margin-bottom: 10px;
+    width: 300px;
+    cursor: pointer;
+    background-color: rgb(13, 143, 194);
+    color: #fff;
+}
