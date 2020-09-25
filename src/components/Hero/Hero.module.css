@@ -1,7 +1,7 @@
 .Hero {
     width: 100%;
     height: 100vh;
-    background: url('../../assets/images/heroImg.jpg') no-repeat center center fixed;
+    background: url('../../assets/images/official/hero3.jpg') no-repeat center center fixed;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
@@ -36,6 +36,10 @@
     margin-bottom: 20vh;
 }
 
+.HeroBtnContainer a {
+    text-decoration: none;
+}
+
 .HeroBtn {
     display: block;
     width: 200px;
@@ -49,10 +53,35 @@
     text-align: center;
     cursor: pointer;
     transition: .7s;
+    text-decoration: none;
 }
 
-.HeroBtn:hover {
+.HeroBtn:hover, aHeroBtn a:hover {
     color: #d6501a;
     border: 3px solid #d6501a;
     background-color: #fff;
+    
+}
+
+.HeroBtn a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.HeroBtn a:hover {
+    color: #d6501a;
+}
+
+@media (max-width: 1001px) {
+    .Header, .SubHeader {
+        margin: 0 auto;
+    }
+
+    .Header {
+        font-size: 120%;;
+    }
+
+    .HeaderContainer {
+        margin-bottom: 5vh;
+    }
 }

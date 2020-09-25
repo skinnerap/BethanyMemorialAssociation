@@ -29,3 +29,19 @@
 .Mission a:hover {
     color: #2075e4;
 }
+
+@media (max-width: 1001px) {
+    .Mission {
+        margin: 0 auto;
+    }
+
+    .Mission h2 {
+        margin: 0 auto;
+        padding-top: 15px;
+    }
+
+    .Mission p {
+        margin: 0 auto;
+        padding: 30px;
+    }
+}

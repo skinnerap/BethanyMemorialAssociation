@@ -26,6 +26,7 @@
     padding: 8px 15px;
     transition: .7s;
     cursor: pointer;
+    z-index: 101;
 }
 
 .donateBtn:hover {
@@ -61,7 +62,7 @@
     font-size: 130%;
 }
 
-@media (max-width: 499px) {
+@media (max-width: 800px) {
     .desktopOnly {
         display: none;
     }
@@ -71,7 +72,7 @@
     }
 }
 
-@media (min-width: 500px) {
+@media (min-width: 800px) {
     .mobileOnly {
         display: none;
     }
@@ -82,4 +83,23 @@
     cursor: pointer;
     margin: 10px;
     padding-left: 20px;
+}
+
+@media (max-width: 1001px) {
+
+    .Toolbar {
+        height: 100px;
+    }
+
+    .title {
+       font-size: 90%; 
+    }
+
+    .nav a {
+        font-size: 80%;
+    }
+
+    .donateBtn {
+        margin-top: 20px;
+    }
 }

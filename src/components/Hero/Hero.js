@@ -1,5 +1,6 @@
 import React from 'react';
 import classes from './Hero.module.css';
+import { HashLink as Link } from 'react-router-hash-link';
 
 const hero = ( props ) => {
 
@@ -15,8 +16,8 @@ const hero = ( props ) => {
                 </h1>
             </div>
             <div className={classes.HeroBtnContainer}>
-                <button className={classes.HeroBtn}>Submit Photos</button>
-                <button className={classes.HeroBtn}>Contact Us</button>
+                <Link to='/submission#PhotoSubmission'><button className={classes.HeroBtn}>Submit Photos</button></Link>
+                <Link to='/#Contact'><button className={classes.HeroBtn}>Contact Us</button></Link>
             </div>
             </div> 
         </div>

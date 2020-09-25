@@ -7,7 +7,7 @@
 
 .Footer a {
     text-decoration: none;
-    font-size: 120%;
+    font-size: 80%;
     font-weight: 300;
     letter-spacing: .2rem;
     line-height: 2rem;
@@ -42,4 +42,26 @@
 
 .RightProp span {
     vertical-align: top;
+}
+
+.RightProp span a {
+    font-size: 80%;
+    vertical-align: super;
+}
+
+@media (max-width: 800px) {
+    .Footer {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+    }
+
+    .RightSide {
+        margin: auto;
+        margin-top: 40px;
+    }
+
+    .Alex {
+        margin: auto;
+    }
+    
 }

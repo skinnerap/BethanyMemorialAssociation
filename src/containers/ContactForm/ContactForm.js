@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import classes from './ContactForm.module.css';
+import axios from '../../hoc/Axios/Axios';
+import Axios from 'axios';
 
 class ContactForm extends Component {
 
@@ -21,7 +23,14 @@ class ContactForm extends Component {
                 selected: false,
                 classList: ''
             }
-        } 
+        },
+        info: {
+            firstName: null,
+            lastName: null,
+            email: null,
+            number: null,
+            message: null
+        }
     }
 
     clickGeneralQuestionHandler = () => {
@@ -88,26 +97,113 @@ class ContactForm extends Component {
 
     }
 
+    firstNameHandler = (e) => {
+
+        const data = {...this.state.info};
+
+        data.firstName = e.target.value;
+
+        this.setState({info: data});
+
+    }
+
+    messageHandler = (e) => {
+
+        const data = {...this.state.info};
+
+        data.message = e.target.value;
+
+        this.setState({info: data});
+
+    }
+
+    lastNameHandler = (e) => {
+
+        const data = {...this.state.info};
+
+        data.lastName = e.target.value;
+
+        this.setState({info: data});
+
+    }
+
+    emailHandler = (e) => {
+
+        const data = {...this.state.info};
+
+        data.email = e.target.value;
+
+        this.setState({info: data});
+
+    }
+
+    numberHandler = (e) => {
+
+        const data = {...this.state.info};
+
+        data.number = e.target.value;
+
+        this.setState({info: data});
+
+    }
+
     submitFormHandler = ( event ) => {
 
         event.preventDefault();
+
+        const data = {
+            firstName: this.state.info.firstName,
+            lastName: this.state.info.lastName,
+            email: this.state.info.email,
+            number: this.state.info.number,
+            subject: [this.state.info.firstName + ' ' + this.state.info.lastName + ': '],
+            message: this.state.info.message
+        }
+
+        for(let key in this.state.selectors) {
+            if(this.state.selectors[key].selected) {
+                data.subject.push(key + ', ');
+            }
+        }
+
+        axios.post('/messages.json', data)
+            .then(res => {
+
+                alert(`You're message was sent successfully. We will get back to you as soon as possible!`)
+                
+                // Send email
+                Axios({
+                    method: 'post',
+                    url: 'http://localhost:8080/api/test/email',
+                    data: JSON.stringify(data),
+                    headers: { 'Content-Type': 'application/json' },
+                }).then(res => {
+                    console.log(res.config.data);
+                }).catch(err => {
+                    console.log(err);
+                })
+
+            }).catch(err => {
+                alert(`Sorry, it appears there has been a network error. Please try again later or contact us directly
+                        by using our contact information found at the bottom of the website.`)
+            });
+
+        
 
     }
 
     render() {
 
-        console.log(this.state.selectors);
-
         return (
-            <div className={classes.ContactForm}>
+            <div id='Contact' className={classes.ContactForm}>
                 <div className={classes.Overlay}>
                     <h4 className={classes.Header}>Contact Us</h4>
                     <div className={classes.Form}>
                         <div className={classes.UserDetails}>
-                            <input type='text' name='firstName' placeholder='First Name *' />
-                            <input type='text' name='lastName' placeholder='Last Name *' />
-                            <input type='text' name='email' placeholder='Email Address *' />
-                            <input type='text' name='phone' placeholder='Phone Number *' />
+                            <input onChange={(e) => this.firstNameHandler(e)} type='text' name='firstName' placeholder='First Name *' />
+                            <input onChange={(e) => this.lastNameHandler(e)} type='text' name='lastName' placeholder='Last Name *' />
+                            <input onChange={(e) => this.emailHandler(e)} type='text' name='email' placeholder='Email Address *' />
+                            <input onChange={(e) => this.numberHandler(e)} type='text' name='phone' placeholder='Phone Number *' />
                         </div>
                         <div className={classes.UserDetails}>
                             <div className={classes.Grid}>
@@ -184,7 +280,7 @@ class ContactForm extends Component {
                             </div>     
                         </div>
                         <div className={classes.U}>
-                            <textarea placeholder='Message / Question *' />
+                            <textarea onChange={(e) => this.messageHandler(e)} placeholder='Message / Question *' />
                         </div>
                     </div>
 

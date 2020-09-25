@@ -3,11 +3,15 @@ import Aux from '../../hoc/Auxiliary';
 import Toolbar from '../Toolbar/Toolbar';
 import Sidedrawer from '../Sidedrawer/Sidedrawer';
 import classes from './Layout.module.css';
-import Hero from '../../components/Hero/Hero';
+import Context from '../../components/context/context';
+import Modal from '../../components/Modal/Modal';
+import Popup from '../../components/Popup/Popup';
+import Footer from '../../components/Footer/Footer';
 
 class Layout extends Component {
 
     state = {
+        openDonateModal: false,
         openSidedrawer: false
     }
 
@@ -15,19 +19,32 @@ class Layout extends Component {
         this.setState({openSidedrawer: true});
     }
 
-    hideSidedrawerHandler = () => {
+    hideSidedrawerHandler = () => { 
         this.setState({openSidedrawer: false});
+    }
+
+    showDonateModalHandler = () => {
+        this.setState({openDonateModal: true});
+    }
+
+    hideDonateModalHandler = () => {
+        this.setState({openDonateModal: false});
     }
 
     render() {
         return (
             <Aux>
-                <Hero />
-                <Toolbar clicked={this.showSidedrawerHandler} />
+                <Toolbar clicked={this.showSidedrawerHandler} clickedDonate={this.showDonateModalHandler} />
                 <Sidedrawer opened={this.state.openSidedrawer} clicked={this.hideSidedrawerHandler} />
-                <main className={classes.Content}>
-                    {this.props.children}
-                </main>
+                <Modal show={this.state.openDonateModal} clicked={this.hideDonateModalHandler}>
+                    <Popup />
+                </Modal> 
+                <Context.Provider>
+                    <main className={classes.Content}>
+                        {this.props.children}
+                    </main>
+                </Context.Provider>
+                <Footer />
             </Aux>
         )
     }

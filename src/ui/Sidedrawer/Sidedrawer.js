@@ -2,6 +2,7 @@ import React from 'react';
 import Aux from '../../hoc/Auxiliary';
 import Backdrop from '../Backdrop/Backdrop';
 import classes from './Sidedrawer.module.css';
+import { HashLink as Link } from 'react-router-hash-link';
 
 const Sidedrawer = ( props ) => {
 
@@ -13,13 +14,13 @@ const Sidedrawer = ( props ) => {
         <Aux>
             <Backdrop show={props.opened} clicked={props.clicked} />
             <div className={classList.join(' ')}>
-                <span>Bethany Memorial Association</span>
+                <span className={classes.Header}>Bethany Memorial Association</span>
                 <nav>
-                    <a href='/' alt='Home'>Home</a>
-                    <a href='/' alt='Home'>Photos</a>
-                    <a href='/' alt='Home'>Events</a>
-                    <a href='/' alt='Home'>Graves</a>
-                    <a href='/' alt='Home'>Contact</a>
+                    <Link to='/#Home' className={classes.Link} onClick={props.clicked}>Home</Link>
+                    <Link to='/#Photos' className={classes.Link} onClick={props.clicked}>Photos</Link>
+                    <Link to='/#Events' className={classes.Link} onClick={props.clicked}>Events</Link>
+                    <Link to='/graves#Graves' className={classes.Link} onClick={props.clicked}>Graves</Link>
+                    <Link to='/#Contact' className={classes.Link} onClick={props.clicked}>Contact</Link>
                 </nav>
             </div>
         </Aux>

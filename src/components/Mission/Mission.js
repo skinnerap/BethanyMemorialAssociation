@@ -8,7 +8,7 @@ const mission = ( props ) => {
             <h2>Our Mission</h2>
             <p>The mission of Bethany Memorial Association is to preserve the historic cemetery and buildings of Bethany 
                Presbyterian Church, located in Charles City County, VA. The Memorial Association also considers requests for
-               burials at the cemetery.  To make such a request, please contact <a href='/'>us here</a>.
+               burials at the cemetery.  To make such a request, please contact <a href='#Contact'>us here</a>.
             </p>
             <p>
                Although the church no longer meets for regular services, the Memorial Association continues to preserve 

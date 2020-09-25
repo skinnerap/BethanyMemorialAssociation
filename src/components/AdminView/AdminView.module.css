@@ -1,0 +1,9 @@
+.AdminView {
+    display: block;
+}
+
+.header {
+    text-align: center;
+    margin-top: 150px;
+    margin-bottom: 100px;
+}

@@ -1,0 +1,50 @@
+.Modal {
+    position: fixed;
+    z-index: 500;
+    background-color: white;
+    width: 300px;
+    border: 1px solid #ccc;
+    box-shadow: 1px 1px 1px black;
+    width: 80%;
+    left: 10%;
+    top: 10%;
+    box-sizing: border-box;
+    transition: all 0.3s ease-out;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+.Modal ul {
+    list-style: none;
+    text-align: left;
+    line-height: 1.5rem;
+    letter-spacing: .3rem;
+    margin-bottom: 5vh;
+}
+
+.Modal span {
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+.Modal h3 {
+    font-size: 200%;
+    font-weight: 300;
+    padding-top: 20px;
+}
+
+.Modal p {
+    padding: 30px;
+    text-indent: 2%;
+}
+
+.Modal h4 {
+    display: block;
+}
+
+@media (min-width: 600px) {
+    .Modal {
+        width: 800px;
+        left: calc(50% - 400px);
+    }
+}

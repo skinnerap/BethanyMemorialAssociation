@@ -1,0 +1,46 @@
+.PublicPhotos {
+    box-sizing: border-box;
+    border: 1px solid rgb(46, 46, 46);
+    width: 90%;
+    margin: auto;
+    background-color: rgb(20, 20, 20);
+    color: #eee;
+    padding: 50px;
+}
+
+.PublicPhotos img {
+    display: block;
+    margin: auto;
+    padding-bottom: 20px;
+    max-width: 80%;
+}
+
+.PublicPhotos p {
+    text-align: center;
+}
+
+.Photos {
+    background-color: #ccc;
+    padding-top: 150px;
+    padding-bottom: 100px;
+}
+
+.Photos h1 {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.Photos button {
+    width: 20%;
+    margin-left: 40%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.PhotosP {
+    width: 70%;
+    margin: auto;
+    text-indent: 5%;
+}

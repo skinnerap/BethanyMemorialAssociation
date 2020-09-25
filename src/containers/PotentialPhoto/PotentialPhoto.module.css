@@ -1,0 +1,25 @@
+.PotentialPhoto {
+    padding-top: 50px;
+    box-sizing: border-box;
+}
+
+.PotentialPhoto img {
+    width: auto;
+    height: auto;
+    max-width: 80%;
+    padding-left: 20%;
+}
+
+.PotentialPhoto button {
+    display: block;
+    width: 80%;
+    margin: auto;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    font-size: 200%;
+    cursor: pointer;
+}
+
+.PotentialPhoto ul {
+    text-align: center;
+}

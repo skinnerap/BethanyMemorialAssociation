@@ -1,0 +1,67 @@
+.Graves {
+    padding-top: 150px;
+    padding-bottom: 40px;
+    background-color: #061c2b;
+    color: #eee;
+}
+
+.Graves h1, .Graves h2 {
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 150%;
+}
+
+.Graves h2 {
+    margin-top: 100px;
+}
+
+.Contribute {
+    margin-top: 30px;
+}
+
+.Graves p {
+    width: 70%;
+    margin: auto;
+    line-height: 1.5rem;
+    text-indent: 5%;
+}
+
+.Graves button {
+    width: 20%;
+    padding: 25px;
+    margin-left: 40%;
+    margin-bottom: 40px;
+    margin-top: 50px;
+    background-color: #eee;
+    border: none;
+    cursor: pointer;
+    font-size: 125%;
+    transition: .5s;
+}
+
+.Graves button:hover {
+    background-color: #272727;
+    color: #eee;
+}
+
+.Graves img {
+    width: 80%;
+    height: auto;
+    margin-left: 10%;
+    padding-bottom: 50px;
+    padding-top: 40px;
+    box-shadow: 0 5px 10px #000000;
+}
+
+.Graves ul {
+    text-align: center;
+    margin-top: 50px;
+    line-height: 2.5rem;
+}
+
+@media (max-width: 800px) {
+    .Graves button {
+        width: 50%;
+        margin-left: 25%;
+    }
+}
