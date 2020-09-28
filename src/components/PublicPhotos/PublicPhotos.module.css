@@ -1,26 +1,26 @@
 .PublicPhotos {
     box-sizing: border-box;
+    display: inline-block;
     border: 1px solid rgb(46, 46, 46);
-    width: 90%;
+    width: 33.3333333%;
+    height: 500px;
     margin: auto;
     background-color: rgb(20, 20, 20);
     color: #eee;
     padding: 50px;
+    vertical-align: bottom;
 }
 
 .PublicPhotos img {
     display: block;
     margin: auto;
     padding-bottom: 20px;
-    max-width: 80%;
-}
-
-.PublicPhotos p {
-    text-align: center;
+    max-width: 90%;
+    max-height: 250px;
 }
 
 .Photos {
-    background-color: #ccc;
+    background-color: rgb(231, 231, 231);
     padding-top: 150px;
     padding-bottom: 100px;
 }
@@ -28,6 +28,8 @@
 .Photos h1 {
     text-align: center;
     margin-bottom: 25px;
+    font-weight: 300;
+    text-transform: uppercase;
 }
 
 .Photos button {
@@ -37,10 +39,65 @@
     padding-bottom: 20px;
     margin-top: 30px;
     margin-bottom: 30px;
+    font-size: 125%;
+    letter-spacing: .2rem;
+    background-color: rgb(212, 109, 49);
+    color: #eee;
+    cursor: pointer;
+    border: 2px hidden rgb(212, 109, 49);
+    transition: .6s;
+    display: block;
+    text-decoration-line: underline;
+}
+
+.Photos button:hover {
+    background-color: #eee;
+    color: rgb(212, 109, 49);
+    border: 2px solid rgb(212, 109, 49);
 }
 
 .PhotosP {
-    width: 70%;
+    width: 95%;
     margin: auto;
     text-indent: 5%;
+}
+
+.Info {
+    width: 85%;
+    margin: auto;
+    padding-top: 5px;
+    padding-bottom: 40px;
+    font-size: 80%;
+}
+
+.Notes {
+    width: 95%;
+    margin: auto;
+    font-weight: 300;
+    line-height: 2rem;
+}
+
+@media (max-width: 1200px) {
+    .PublicPhotos {
+        width: 50%;
+    }
+}
+
+@media (max-width: 800px) {
+    .Info, .Notes {
+        width: auto;
+    }
+
+    .Photos button {
+        width: 80%;
+        margin-left: 10%;
+    }
+
+    .Photos h1 {
+        font-size: 230%;
+    }
+
+    .PublicPhotos {
+        width: 100%;
+    }
 }

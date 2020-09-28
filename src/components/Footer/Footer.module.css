@@ -25,8 +25,13 @@
     margin: 0 auto;
 }
 
+.Alex a{
+    font-weight: 600;
+}
+
 .UL {
     list-style: none;
+    font-size: 120%;
 }
 
 .RightSide {
@@ -47,6 +52,7 @@
 .RightProp span a {
     font-size: 80%;
     vertical-align: super;
+    font-weight: 600;
 }
 
 @media (max-width: 800px) {
@@ -58,10 +64,16 @@
     .RightSide {
         margin: auto;
         margin-top: 40px;
+        font-weight: 500;
+        line-height: 3rem;
     }
 
     .Alex {
         margin: auto;
+    }
+
+    .RightProp span a, .Footer a {
+        font-weight: 600;
     }
     
 }

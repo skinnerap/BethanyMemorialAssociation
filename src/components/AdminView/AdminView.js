@@ -11,7 +11,7 @@ class AdminView extends Component {
 
     componentDidMount() {
 
-        const userPass = prompt('Password Required: ');
+        const userPass = prompt('Password: ');
 
         if(userPass === 'CharlesCity') {
             Axios.get('/images.json')
@@ -30,8 +30,6 @@ class AdminView extends Component {
                     
                 }
 
-                console.log(arr);
-
                 this.setState({potentialPhotos: arr});
             });
         }
@@ -46,6 +44,9 @@ class AdminView extends Component {
         updatedPhoto.approved = 'true';
         Axios.put(`/images/${photo.id}.json`, updatedPhoto).then(response => {
             console.log(response);
+            alert('Successfully Approved Photo');
+        }).catch(err => {
+            alert('Error: ' + err + 'Please notify Alexander Skinner or current website administrator of the issue.');
         })
     
     } 
@@ -53,7 +54,10 @@ class AdminView extends Component {
     deletePhotoHandler = ( photo ) => {
 
         Axios.delete(`/images/${photo.id}.json`).then(response => {
-            console.log(response)
+            console.log(response);
+            alert('Successfully Deleted Submission');
+        }).catch(err => {
+            alert('Error: ' + err + 'Please notify Alexander Skinner or current website administrator of the issue.');
         })
 
     }

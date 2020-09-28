@@ -35,7 +35,7 @@ app.post('/api/test/email', (req, res) => {
 
     console.log(req.body);
 
-    const subject = req.body.subject.join(',');
+    const subject = req.body.subject.join(', ');
 
     var nodemailer = require('nodemailer');
 
@@ -49,7 +49,7 @@ app.post('/api/test/email', (req, res) => {
 
     var mailOptions = {
     from: process.env.GACC,
-    to: 'mollie.crom@gmail.com',
+    to: 'bethanymemorialassociation@gmail.com',
     subject: subject,
     text: `${req.body.firstName} ${req.body.lastName}: ${req.body.email} (${req.body.number}) ------------------------- ${req.body.message.toString()}`
     };

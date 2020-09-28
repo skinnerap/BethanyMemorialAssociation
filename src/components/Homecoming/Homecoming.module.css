@@ -62,3 +62,9 @@
         display: block;
     }
 }
+
+@media (max-width: 800px) {
+    .Title {
+        font-size: 120%;
+    }
+}

@@ -1,12 +1,17 @@
 .SideDrawer {
     position: fixed;
     width: 80%;
-    height: 50vh;
+    height: 100vh;
     left: 0;
     top:  0;
     z-index: 200;
     color: rgb(236, 236, 236);
     background-color: rgb(29, 29, 29);
+}
+
+.Open nav {
+    margin-top: 100px;
+    margin-left: 60px;
 }
 
 @media (min-width: 500px) {
@@ -16,18 +21,18 @@
 }
 
 .Header {
-    padding-top: 5vh;
-    margin: auto;
+    font-size: 150%;
+    padding: 10px;
 }
 
 .Link {
-    padding-bottom: 10px;
+    padding-bottom: 30px;
     display: block;
     text-decoration: none;
     padding-left: 20%;
     padding-top: 10%;
     font-size: 120%;
-    color: rgb(10, 61, 95);
+    color: rgb(224, 224, 224);
     font-weight: 500;
 }
 
@@ -37,14 +42,16 @@
     position: fixed;
     top: 0;
     left: 0;
-    background-color: #eee;
+    background-color: rgb(27, 27, 27);
+    color: #eee;
     height: 100vh;
     width: 70%;
     z-index: 1000;
+    transition: .8s;
 }
 
 .Close {
     transform: translateX(-100%);
-    display: none;
+    display: table-column;
 }
 

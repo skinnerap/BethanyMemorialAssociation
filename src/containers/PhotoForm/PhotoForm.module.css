@@ -44,14 +44,23 @@
     margin-top: 10px;
     margin-bottom: 10px;
     width: 30%;
-    margin: auto;
+    margin-left: 35%;
     padding-bottom: 20px;
 }
 
+.photoInput button {
+    background-color: orange;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: .6s;
+}
+
 .preview img {
-    width: 80%;
+    width: 60%;
     height: auto;
     margin: auto;
+    padding-bottom: 75px;
 }
 
 .userName {

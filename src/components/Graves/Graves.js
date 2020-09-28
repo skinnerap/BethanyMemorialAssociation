@@ -31,13 +31,13 @@ const graves = ( ) => {
             <ScrollAnimation animateIn="fadeInLeft" animateOut='fadeOutRight'>
             <p>To view the graves at Bethany Presbyterian Church please click the button below for a list. The list is 
                 partial and  currently being updated. If you would be interested in contributing towards the 
-                updating of this list please contact us and we wil lget back in touch as soon as possible.
+                updating of this list please contact us and we will get back in touch as soon as possible.
             </p>
             </ScrollAnimation>
-            <a href='https://virginiagravestones.org/cemetery.php?cemID=2728' target='_blank'><button>View Graves</button></a>
+            <a href='https://virginiagravestones.org/cemetery.php?cemID=2728' target='_blank' rel="noopener noreferrer"><button>View Graves</button></a>
             <Link to='/#Contact'><button className={classes.Contribute}>Contribute to Graves</button></Link>
-            <img src={img} />
-            <img src={img1} />
+            <img style={{marginTop: '50px'}} src={img} alt='The Bethany Cemetery Grounds' />
+            <img src={img1}  alt='The Bethany Cemetery Grounds' />
         </div>
     )
 

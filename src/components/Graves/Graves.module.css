@@ -8,7 +8,9 @@
 .Graves h1, .Graves h2 {
     text-align: center;
     margin-bottom: 50px;
-    font-size: 150%;
+    font-size: 220%;
+    font-weight: 300;
+    font-variant: small-caps;
 }
 
 .Graves h2 {
@@ -24,15 +26,17 @@
     margin: auto;
     line-height: 1.5rem;
     text-indent: 5%;
+    font-weight: 300;
+    word-spacing: .2rem;;
 }
 
 .Graves button {
     width: 20%;
     padding: 25px;
     margin-left: 40%;
-    margin-bottom: 40px;
     margin-top: 50px;
-    background-color: #eee;
+    background-color: rgb(201, 98, 29);
+    color: #eee;
     border: none;
     cursor: pointer;
     font-size: 125%;
@@ -40,8 +44,8 @@
 }
 
 .Graves button:hover {
-    background-color: #272727;
-    color: #eee;
+    background-color: #eee;
+    color: rgb(201, 98, 29);
 }
 
 .Graves img {
@@ -50,7 +54,7 @@
     margin-left: 10%;
     padding-bottom: 50px;
     padding-top: 40px;
-    box-shadow: 0 5px 10px #000000;
+    
 }
 
 .Graves ul {
@@ -59,7 +63,7 @@
     line-height: 2.5rem;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 1001px) {
     .Graves button {
         width: 50%;
         margin-left: 25%;

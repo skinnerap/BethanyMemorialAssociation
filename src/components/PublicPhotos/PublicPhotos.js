@@ -49,11 +49,13 @@ class PublicPhotos extends Component {
                 {this.state.photos === null ? null : this.state.photos.map(photo => {
                     return (
                         <div className={classes.PublicPhotos}>
-                            <a href={photo.url} target='_blank' alt='link to full size image'><img key={photo.key} src={photo.url} alt={photo.description} /></a>
-                            <p>Submitted by: {photo.username}</p>
-                            <p>Approximate date of Photo: {photo.date}</p>
-                            <p>Description: {photo.description}</p>
-                            <p>Notes: {photo.notes}</p>
+                            <a href={photo.url} target='_blank' rel="noopener noreferrer" alt='link to full size image'><img key={photo.key} src={photo.url} alt={photo.description} /></a>
+                            <div className={classes.Info}>
+                                <p>Submitted by: {photo.username}</p>
+                                <p>Approximate date of Photo: {photo.date}</p>
+                                <p>Description: {photo.description}</p>
+                            </div>
+                            <p className={classes.Notes}>Notes: {photo.notes}</p>
                         </div>
                     )
                 })}

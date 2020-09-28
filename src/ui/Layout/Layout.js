@@ -31,6 +31,7 @@ class Layout extends Component {
         this.setState({openDonateModal: false});
     }
 
+
     render() {
         return (
             <Aux>

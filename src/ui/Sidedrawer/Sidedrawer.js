@@ -14,7 +14,7 @@ const Sidedrawer = ( props ) => {
         <Aux>
             <Backdrop show={props.opened} clicked={props.clicked} />
             <div className={classList.join(' ')}>
-                <span className={classes.Header}>Bethany Memorial Association</span>
+                
                 <nav>
                     <Link to='/#Home' className={classes.Link} onClick={props.clicked}>Home</Link>
                     <Link to='/#Photos' className={classes.Link} onClick={props.clicked}>Photos</Link>

@@ -7,7 +7,7 @@ const hero = ( props ) => {
     const year = new Date().getFullYear();
 
     return (
-        <div className={classes.Hero}>
+        <div id='header' className={classes.Hero}>
             <div className={classes.Overlay}>
             <div className={classes.HeaderContainer}>
                 <h1 className={classes.Header}>
@@ -16,7 +16,7 @@ const hero = ( props ) => {
                 </h1>
             </div>
             <div className={classes.HeroBtnContainer}>
-                <Link to='/submission#PhotoSubmission'><button className={classes.HeroBtn}>Submit Photos</button></Link>
+                <Link to='/submission'><button className={classes.HeroBtn}>Submit Photos</button></Link>
                 <Link to='/#Contact'><button className={classes.HeroBtn}>Contact Us</button></Link>
             </div>
             </div> 

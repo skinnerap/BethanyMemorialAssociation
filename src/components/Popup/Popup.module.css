@@ -37,8 +37,14 @@
     letter-spacing: .2rem;
     font-size: 120%;
     margin-bottom: 10px;
+    margin-top: 20px;
 }
 
+.PO {
+    font-size: 180%;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
 @media (max-width: 800px) {
     .Popup {
         width: 500px;

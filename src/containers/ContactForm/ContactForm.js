@@ -160,10 +160,36 @@ class ContactForm extends Component {
             message: this.state.info.message
         }
 
+        if(data.firstName === null) {
+            alert('You must enter a first name to submit your message.');
+            return;
+        }
+
+        if(data.lastName === null) {
+            alert('You must enter a last name to submit your message.');
+            return;
+        }
+
+        if(data.email === null) {
+            alert('You must enter an e-mail address to submit your message.');
+            return;
+        }
+
+        if(data.message === null || data.message.length < 10) {
+            alert('You must enter a message of at least 10 characters.');
+            return;
+        }
+
+
         for(let key in this.state.selectors) {
             if(this.state.selectors[key].selected) {
-                data.subject.push(key + ', ');
+                data.subject.push(key + ' ');
             }
+        }
+
+        if(data.subject.length < 2) {
+            alert('You must choose at least 1 subject ("General Question" if you are not sure)');
+            return;
         }
 
         axios.post('/messages.json', data)
@@ -179,6 +205,7 @@ class ContactForm extends Component {
                     headers: { 'Content-Type': 'application/json' },
                 }).then(res => {
                     console.log(res.config.data);
+                    document.getElementById('contactForm').reset();
                 }).catch(err => {
                     console.log(err);
                 })
@@ -199,6 +226,7 @@ class ContactForm extends Component {
                 <div className={classes.Overlay}>
                     <h4 className={classes.Header}>Contact Us</h4>
                     <div className={classes.Form}>
+                    <form id='contactForm'>
                         <div className={classes.UserDetails}>
                             <input onChange={(e) => this.firstNameHandler(e)} type='text' name='firstName' placeholder='First Name *' />
                             <input onChange={(e) => this.lastNameHandler(e)} type='text' name='lastName' placeholder='Last Name *' />
@@ -282,6 +310,7 @@ class ContactForm extends Component {
                         <div className={classes.U}>
                             <textarea onChange={(e) => this.messageHandler(e)} placeholder='Message / Question *' />
                         </div>
+                    </form>
                     </div>
 
                     <div style={{textAlign: 'center'}}>

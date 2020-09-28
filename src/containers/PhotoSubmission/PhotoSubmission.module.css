@@ -26,3 +26,9 @@
     color: rgb(243, 243, 243);
     background-color: #070f3f;
 }
+
+@media (max-width: 800px) {
+    .PhotoSubmission h1 {
+        font-size: 250%;
+    }
+}
